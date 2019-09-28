@@ -1,7 +1,7 @@
 	CSCI3260 Assignment 1 Keyboard / Mouse Events  
 
-Name: 
-Student ID:
+Name: Romario Timothy Vaz
+Student ID: 1155085563
 
 Manipulation:
 	// For example:
