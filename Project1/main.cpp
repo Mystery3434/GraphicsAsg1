@@ -766,9 +766,7 @@ void paintGL(void)
 	translate_matrix = glm::translate(glm::mat4(),
 		glm::vec3(x_delta * x_press_num, 0.0f, 0.0f));;
 
-	//glm::mat4 rotateMatrix = glm::rotate(mat4(), rotate_value, vec3(0, 1, 0));
 	
-	//modelTransformMatrix *= rotateMatrix;
 
 	modelTransformMatrix *= scaleMatrix;
 	modelTransformMatrix *= translate_matrix;
@@ -779,7 +777,7 @@ void paintGL(void)
 		GL_FALSE, &modelTransformMatrix[0][0]);
 
 
-	//glDrawArrays(GL_TRIANGLES, 0, 12); //render primitives from array data
+	
 	glDrawElements(GL_TRIANGLES, 100, GL_UNSIGNED_INT, (void*)0);
 
 
@@ -839,9 +837,9 @@ void paintGL(void)
 	glm::mat4 projectionMatrix = glm::perspective(glm::radians(45.0f), (float)1.0, 0.1f, 100.0f);
 
 	glm::mat4 View = glm::lookAt(
-		glm::vec3(0, 1, 3), // Camera is at (4,3,3), in World Space
+		glm::vec3(0, 1, 3), // Camera is at (0,1,3), in World Space
 		glm::vec3(0, 0, 0), // and looks at the origin
-		glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+		glm::vec3(0, 1, 0)  // Head is up 
 	);
 
 	projectionMatrix *= View;
